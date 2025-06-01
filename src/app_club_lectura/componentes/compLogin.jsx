@@ -1,16 +1,18 @@
 import { Box,FormControl, FormLabel, TextField, Typography ,Button,FormControlLabel} from "@mui/material";
 import { CompLoginEx } from "./compLoginEx";
 
-export const CompLogin = ({estilos}) => {
+export const CompLogin = ({sx,estilos}) => {
+    console.log("CompLogin sx",sx);
+    console.log("CompLogin estilos",estilos);
     return (
         <>
-            <Box className={estilos.formContainer}>
-                <Typography className={estilos.textoCabecera}>Inicio de sesion</Typography>
+              <Box  sx ={sx}className={estilos.formContainer}>
+                <Typography >Inicio de sesion</Typography>
                 <FormControl>
-                    <Box className={estilos.inputContainer}>
+                    <Box>
                         <FormLabel  htmlFor="email">Correo</FormLabel>
                         <TextField
-                            className={estilos.imputLabel}
+                           
                             id="email"
                             type="email"
                             name="email"
@@ -22,7 +24,7 @@ export const CompLogin = ({estilos}) => {
                             variant="outlined"
                         />
                     </Box>
-                    <Box className={estilos.inputContainer}>
+                     <Box className={estilos.inputContainer}>
                         <FormLabel htmlFor="password">Contraseña</FormLabel>
                         <TextField
                             id="password"
@@ -36,8 +38,7 @@ export const CompLogin = ({estilos}) => {
                             variant="outlined"
                         />
                     </Box>
-                    <Box className={estilos.boton}>
-
+                    <Box className={estilos.boton}>  
                     <Button
                         sx={{ width: '100%' }}
                         type="submit"
